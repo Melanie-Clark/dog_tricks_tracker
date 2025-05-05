@@ -1,0 +1,31 @@
+<h1>My Dashboard</h1>
+<p>Here is a list of all the tricks completed or ready to do and have fun with your dog!</p>
+
+<h2>Pawtastic Tricks!</h2>
+<table>
+  <thead>
+    <tr>
+      <th class="first_column">Trick</th>
+      <th>1m</th>
+      <th>Outdoors</th>
+      <th>Distance</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tricks.each do |trick| %>
+      <tr>
+        <td class="first_column">
+          <%= trick.name %>
+        </td>
+        <% 3.times do %>
+          <td class="completed">
+
+          </td>
+        <% end %>
+        <!-- Notes column -->
+        <td></td> 
+      </tr>
+    <% end %>
+  </tbody>
+</table>

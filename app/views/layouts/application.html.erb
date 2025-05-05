@@ -23,6 +23,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>Dog Trick Tracker</h1>
+      <nav>
+        <!--If the user is not on the homepage, the link will be Home-->
+        <%= link_to current_page?(root_path) ? 'My Dashboard' : 'Home', current_page?(root_path) ? dashboard_path : root_path %>
+      </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
