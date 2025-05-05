@@ -20,15 +20,22 @@ header {
   background-color: #8d807e;
   color: #f8da3b;
   padding: 0.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center; 
 }
 
+nav a {
+  color: #f8da3b;
+  margin-left: 1rem;
+}
+
 main {
-  padding: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 2rem;
 }
 
 h1.title {
