@@ -36,10 +36,6 @@ main {
   padding: 2rem 4rem 0; /*padding-top 2rem, left and right 4rem */
 }
 
-h1.title {
-  margin: 0;
-}
-
 p {
   margin-top: 2rem;
 }
