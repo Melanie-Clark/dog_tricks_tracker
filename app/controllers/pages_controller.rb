@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   end
   
   def dashboard
+    @tricks = Trick.all
   end
 end
