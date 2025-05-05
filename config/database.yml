@@ -82,8 +82,8 @@ production:
   primary: &primary_production
     <<: *default
     database: dog_tricks_tracker_production
-    username: dog_tricks_tracker
-    password: <%= ENV["DOG_TRICKS_TRACKER_DATABASE_PASSWORD"] %>
+    username: <%= ENV["DB_NAME"] %>
+    password: <%= ENV["DB_PASSWORD"] %>
   cache:
     <<: *primary_production
     database: dog_tricks_tracker_production_cache
