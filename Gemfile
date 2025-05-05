@@ -51,7 +51,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   # Add dotenv-rails gem
-  gem 'dotenv-rails', groups: ['development', 'test']
+  gem "dotenv-rails", groups: [ "development", "test" ]
 end
 
 group :development do
