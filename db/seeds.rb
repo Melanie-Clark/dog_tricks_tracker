@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-tricks = ["Sit", "Stay", "Beg", "Spin", "Twist", "Roll over"]
+tricks = [ "Sit", "Stay", "Beg", "Spin", "Twist", "Roll over" ]
 
 tricks.each do |name|
   Trick.find_or_create_by!(name: name)
