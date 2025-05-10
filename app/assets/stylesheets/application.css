@@ -1,24 +1,18 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+:root {
+  --second-color: #C96868;
+}
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Comic Sans MS', sans-serif;
   margin: 0;
   padding: 0;
-  background: #fcf5d0;
+  background-color: rgb(206, 206, 223, 0.1);
+
 }
 
 header {
-  background-color: #8d807e;
-  color: #f8da3b;
+  /* background-color: rgb(248 253 252); */
+  background-color:rgb(156 167 211 / 10%);
   padding: 0.5rem;
   padding-left: 4rem;
   padding-right: 4rem;
@@ -28,20 +22,61 @@ header {
 }
 
 nav a {
-  color: #f8da3b;
+  color: var(--second-color);
   margin-left: 1rem;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo {
+  font-size: 40px;
+  margin: 0;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0;
 }
 
 main {
-  padding: 2rem 4rem 0; /*padding-top 2rem, left and right 4rem */
+  padding: 2rem 4rem; /*padding-top 2rem, left and right 4rem */
+}
+
+.first_color {
+  color: #7EACB5;
+}
+
+.second_color {
+  color: var(--second-color);
+}
+
+.third_color {
+  color: #e9ba4c;
+}
+
+.black {
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
 }
 
 p {
-  margin-top: 2rem;
+  margin: 1rem;
+  text-align: center;
+  font-size: 30px;
 }
 
-img {
-  float: right;
+.center {
+  text-align: center;
+}
+
+.rotate_45 {
+  transform: rotate(90deg);
 }
 
 table {
@@ -50,7 +85,7 @@ table {
 }
 
 table, th, td {
-  border: 2px solid rgb(230, 0, 75, 0.5); 
+  border: 2px solid var(--second-color); 
 }
 
 .first_column {

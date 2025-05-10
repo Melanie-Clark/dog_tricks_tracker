@@ -4,7 +4,6 @@
     <title><%= content_for(:title) || "Dog Tricks Tracker" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -24,10 +23,12 @@
 
   <body>
     <header>
-      <h1>Dog Trick Tracker</h1>
+      <h1 class="logo">
+        <span class="first_color">Paw</span><span class="second_color">tastic</span><span class="third_color">!</span>
+      </h1>
       <nav>
         <!--If the user is not on the homepage, the link will be Home-->
-        <%= link_to current_page?(root_path) ? 'My Dashboard' : 'Home', current_page?(root_path) ? dashboard_path : root_path %>
+        <%= link_to (current_page?(root_path) ? 'My Dashboard' : 'Home'), current_page?(root_path) ? dashboard_path : root_path %>
       </nav>
     </header>
 
