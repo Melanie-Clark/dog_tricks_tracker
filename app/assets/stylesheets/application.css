@@ -89,25 +89,6 @@ p {
   color: var(--third-color);
 }
 
-.btn-submit {
-  color: #FFFFFF;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background-color: var(--first-color);
-  padding: 1rem 1rem;
-  /* border: 3rem; */
-  border-color: #FFFFFF;
-}
-
-.signup-form {
-  /* text-align: center; */
-}
-
-/* 
-.rotate_45 {
-  transform: rotate(90deg);
-} */
-
 table {
   width: 100%;
   border-collapse: collapse; 
