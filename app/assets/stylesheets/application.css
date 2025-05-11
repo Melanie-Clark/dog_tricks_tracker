@@ -1,5 +1,13 @@
 :root {
+  --first-color: #7EACB5;
   --second-color: #C96868;
+  --third-color:   #e9ba4c;
+}
+
+html, body {
+  height: 100%; /* ensures body is full height */
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -7,44 +15,70 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(206, 206, 223, 0.1);
+  display: flex;
+  flex-direction: column; /* stacks content vertically */
+  /* background-color: rgb(248 253 252); light green option */
+}
 
+header, footer{
+  background-color:rgb(156 167 211 / 10%);
+  padding: 0.5rem 4rem;
 }
 
 header {
-  /* background-color: rgb(248 253 252); */
-  background-color:rgb(156 167 211 / 10%);
-  padding: 0.5rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center; 
+}
+
+footer {
+  display: block;
+  text-align: center;
+  font-size: 1.25rem;
 }
 
 nav a {
   color: var(--second-color);
   margin-left: 1rem;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
-.logo {
-  font-size: 40px;
-  margin: 0;
+header .logo {
+  font-size: 2.25rem;
+  font-style: italic;
+  margin: 0.5rem;
+}
+
+footer .logo {
+  font-size: 1.25rem;
   font-style: italic;
 }
 
+main {
+  flex: 1; /* ensures main content area takes available space */
+  padding: 0.5rem 4rem; /*padding-top 2rem, left and right 4rem */
+  text-align: center;
+}
+
 h1 {
-  font-size: 40px;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
   margin: 0;
 }
 
-main {
-  padding: 2rem 4rem; /*padding-top 2rem, left and right 4rem */
+p {
+  margin: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .first_color {
-  color: #7EACB5;
+  color: var(--first-color);
 }
 
 .second_color {
@@ -52,32 +86,38 @@ main {
 }
 
 .third_color {
-  color: #e9ba4c;
+  color: var(--third-color);
 }
 
-.black {
-  color: black;
+/* FORM styling */
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  width: 50%;
+  border: 0.15rem solid var(--third-color);
+  border-radius: 0.75rem; /* curved corners*/
+  height: 3rem;
+  margin: 0.3rem;
+  text-indent: 1rem;
+  font-size: 1.2rem;
 }
 
-h2 {
-  text-align: center;
-  font-size: 30px;
-  margin: 0;
+.btn-submit {
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: var(--first-color);
+  padding: 1rem 1rem;
+  border: 0.2rem solid;
+  border-radius: 0.75rem; /* curved corners*/
+  border-color: #7eacb57e;
+  display: block;
+  align-content: center;
+  margin: 2rem auto;
 }
 
-p {
-  margin: 1rem;
-  text-align: center;
-  font-size: 30px;
-}
-
-.center {
-  text-align: center;
-}
-
-.rotate_45 {
-  transform: rotate(90deg);
-}
+/* DASHBOARD styling */
 
 table {
   width: 100%;
@@ -85,13 +125,9 @@ table {
 }
 
 table, th, td {
-  border: 2px solid var(--second-color); 
+  border: 0.15rem solid var(--second-color); 
 }
 
 .first_column {
   padding-left: 1rem;
-}
-
-.completed {
-  text-align: center;
 }
