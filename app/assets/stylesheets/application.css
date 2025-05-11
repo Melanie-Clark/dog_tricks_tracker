@@ -89,11 +89,12 @@ p {
   color: var(--third-color);
 }
 
+/* FORM styling */
+
 input[type=text],
 input[type=email],
 input[type=password] {
   width: 50%;
-  /* border: 0.5rem solid #E6E6E6; */
   border: 0.15rem solid var(--third-color);
   border-radius: 0.75rem; /* curved corners*/
   height: 3rem;
@@ -115,6 +116,8 @@ input[type=password] {
   align-content: center;
   margin: 2rem auto;
 }
+
+/* DASHBOARD styling */
 
 table {
   width: 100%;

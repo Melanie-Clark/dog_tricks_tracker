@@ -2,7 +2,8 @@
   <h1 class="first_color">Sign up</h1>
   <br>
   <div class="form"></div>
-    <%= form_for(@user) do |f| %>
+  <!-- @user is User.new (as per contoller). As it's a new instance, Rails auto routes the POST request to users#create in UsersController -->
+    <%= form_for(@user) do |f| %> 
       <%= f.text_field :first_name, :placeholder => "First Name" %>
       <%= f.text_field :last_name, :placeholder => "Surname" %>
       <%= f.email_field :email, :placeholder => "E-mail" %>
