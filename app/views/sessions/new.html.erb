@@ -1,12 +1,20 @@
 <div class="signin_form">
-  <h2 class="first_color">Sign in</h2>
+  <h2 class="first-color">Sign in</h2>
   
   <div class="form-small">
     <%= form_for(:session, url: signin_path) do |f| %> 
       <%= f.email_field :email, :placeholder => "E-mail" %>
       <%= f.password_field :password, :placeholder => "Password" %>
-      <%= f.submit "Log in", class: "form-btn" %>
+      <%= f.submit "Sign in", class: "form-btn" %>
     <% end %>
+    <div class="small-txt">
+      New user?&nbsp;
+      <%= link_to "Register here", register_path %>
+      <div class="img-crop-50">
+        <%= image_tag("paw_prints.png", alt: "Pawprints", width: 400, height: 40) %>
+      </div>
+
+    </div>
   </div>
 </div>
 
