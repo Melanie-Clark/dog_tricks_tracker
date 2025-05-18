@@ -25,11 +25,13 @@
   <body>
     <header>
       <h1 class="logo">
-        <span class="first_color">Paw</span><span class="second_color">tastic</span><span class="third_color">!</span>
+        <%= link_to root_path do %>
+          <span class="first_color">Paw</span><span class="second_color">tastic</span><span class="third_color">!</span>
+        <% end %>
       </h1>
       <nav>
         <!--If the user is not on the homepage, the link will be Home-->
-        <%= link_to (current_page?(root_path) ? 'My Dashboard' : 'Home'), current_page?(root_path) ? dashboard_path : root_path %>
+        <%= link_to (current_page?(root_path) ? 'Login' : 'Home'), current_page?(root_path) ? signup_path : root_path %>
       </nav>
     </header>
 
