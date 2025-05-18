@@ -30,9 +30,9 @@
         <% end %>
       </h1>
       <nav class="button">
-        <%= link_to "Sign up", signup_path%>
+        <%= link_to "Register", register_path%>
         <!--If the user is not on the homepage, the link will be Home-->
-        <%= link_to (current_page?(root_path) ? "Login" : "Home"), current_page?(root_path) ? login_path : root_path %>
+        <%= link_to (current_page?(root_path) ? "Sign in" : "Home"), current_page?(root_path) ? signin_path : root_path %>
       </nav>
     </header>
 

@@ -101,6 +101,11 @@ p {
   cursor: pointer;
   padding: 0.5em 1.2em;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-right: 15px; 
+}
+
+.button a:last-child {
+  margin-right: 0; 
 }
 
 .form-btn {

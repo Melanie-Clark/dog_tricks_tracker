@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to "/", allow_other_host: true
       puts "Success - User already registered"
     else
-      redirect_to "/login", allow_other_host: true
+      redirect_to "/signin", allow_other_host: true
       puts "User not registered or incorrect password"
     end
   end
