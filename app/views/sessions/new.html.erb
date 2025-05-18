@@ -1,0 +1,12 @@
+<div class="login_form">
+  <h2 class="first_color">Log In</h2>
+  
+  <div class="form-small">
+    <%= form_for(:session, url: login_path) do |f| %> 
+      <%= f.email_field :email, :placeholder => "E-mail" %>
+      <%= f.password_field :password, :placeholder => "Password" %>
+      <%= f.submit "Log in", class: "form-btn" %>
+    <% end %>
+  </div>
+</div>
+

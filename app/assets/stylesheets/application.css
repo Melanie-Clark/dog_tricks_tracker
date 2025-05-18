@@ -61,6 +61,36 @@ footer .logo {
   font-style: italic;
 }
 
+main {
+  flex: 1; /* ensures main content area takes available space */
+  padding: 0.5rem 4rem; /*padding-top 2rem, left and right 4rem */
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+  margin: 0;
+}
+
+p {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* BUTTONS */
+
 .button a, .form-btn {
   text-decoration: none;
   color: white;
@@ -92,34 +122,11 @@ footer .logo {
   filter: brightness(0.95);
 }
 
-main {
-  flex: 1; /* ensures main content area takes available space */
-  padding: 0.5rem 4rem; /*padding-top 2rem, left and right 4rem */
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: 2.25rem;
-  margin: 0;
-}
-
-p {
-  margin: 0.5rem;
-  font-size: 1.5rem;
-}
-
-/* FORM styling */
+/* FORMS */
 
 input[type=text],
 input[type=email],
 input[type=password] {
-  width: 50%;
   border: 0.15rem solid var(--third-color);
   border-radius: 0.75rem; /* curved corners*/
   height: 3rem;
@@ -128,7 +135,17 @@ input[type=password] {
   font-size: 1.2rem;
 }
 
-/* DASHBOARD styling */
+.form input[type] {
+  width: 50%;
+}
+
+.form-small input[type] {
+  width: 40%;
+  display: block;
+  margin: 2rem auto;
+}
+
+/* DASHBOARD */
 
 table {
   width: 100%;
