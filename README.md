@@ -1,24 +1,68 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ADD LOGO
 
-Things you may want to cover:
+<h1 style="font-style: italic">
+  <span style="color: #7EACB5;">Paw</span><span style="color: #C96868;">tastic</span><span style="color: #e9ba4c;">!</span>
+  <img src="public/favicon_paw.png" alt="Home page image" height=25/>
+</h1> 
 
-* Ruby version
+Pawtastic is a Ruby on Rails web application designed to help dog owners keep track of their dogs tricks performance and find new tricks. 
 
-* System dependencies
+This guide will help you set up the project, run the server, and deploy your application.
 
-* Configuration
+<img src="app/assets/images/readme_images/home_page.png" alt="Home page image"/>
 
-* Database creation
+## Requirements
 
-* Database initialization
+Before getting started, please make sure you have the following installed:
 
-* How to run the test suite
+- **Ruby** (version 3.4.3)
+- **Rails** (version 8.0.2)
+- **PostgreSQL** (or SQLite3 for local development)
 
-* Services (job queues, cache servers, search engines, etc.)
+You can check if you already have these dependencies:
 
-* Deployment instructions
+`ruby -v`
 
-* ...
+`rails -v`
+
+`psql --version`
+
+The ouput should be i.e. ruby 3.4.3
+
+## Setup
+Follow these steps to get your local environment set up:
+
+<u>Clone the repository:</u>
+
+`git clone https://github.com/Melanie-Clark/pawtastic.git`
+`cd pawtastic`
+
+## Install the required dependencies:
+`bundle install`
+
+## Set up environment variables:
+
+Create a new file under the project root:
+`echo "DB_USERNAME=[Enter db username] 
+DB_PASSWORD=[Enter db password]" >> .env`
+
+## Database Setup
+Create the database:
+
+`rails db:create`
+
+Run database migrations:
+
+`rails db:migrate`
+
+## Running the Server
+Start the Rails server:
+
+`rails s`
+
+## Open the app in your browser:
+
+Navigate to http://localhost:3000 to view the app in action!
+
+
