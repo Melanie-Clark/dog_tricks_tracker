@@ -1,14 +1,19 @@
-<div class="sign_up_form">
-  <h1 class="first_color">Sign up</h1>
-  <br>
-  <div class="form"></div>
+<div class="register_form">
+  
+  <h2 class="first-color">Register</h2>
+
+  <div class="form">
   <!-- @user is User.new (as per contoller). As it's a new instance, Rails auto routes the POST request to users#create in UsersController -->
     <%= form_for(@user) do |f| %> 
       <%= f.text_field :first_name, :placeholder => "First Name" %>
       <%= f.text_field :last_name, :placeholder => "Surname" %>
       <%= f.email_field :email, :placeholder => "E-mail" %>
       <%= f.password_field :password, :placeholder => "Password" %>
-      <%= f.submit "Create an Account", class: "btn-submit" %>
+      <%= f.submit "Create an Account", class: "form-btn" %>
     <% end %>
+    <div class="small-txt">
+      Already registered?&nbsp;
+      <%= link_to "Sign in", signin_path %>
+    </div>
   </div>
 </div>

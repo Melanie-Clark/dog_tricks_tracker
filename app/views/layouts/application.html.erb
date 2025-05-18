@@ -25,11 +25,24 @@
   <body>
     <header>
       <h1 class="logo">
-        <span class="first_color">Paw</span><span class="second_color">tastic</span><span class="third_color">!</span>
+        <%= link_to root_path do %>
+          <span class="first-color">Paw</span><span class="second-color">tastic</span><span class="third-color">!</span>
+        <% end %>
       </h1>
       <nav>
-        <!--If the user is not on the homepage, the link will be Home-->
-        <%= link_to (current_page?(root_path) ? 'My Dashboard' : 'Home'), current_page?(root_path) ? dashboard_path : root_path %>
+        <% if current_user %>
+          <div class="user-nav">
+            <%= "Hi #{current_user.first_name}!" %>
+            <%= button_to "Log out", logout_path, method: "delete", class: "button form-nav-btn" %>
+          </div>
+        <% elsif current_page?(register_path) || current_page?(signin_path)%>  
+            <%= link_to "Home", root_path, class: "button" %>
+        <% else %>
+            <%= link_to "Sign in", signin_path, class: "button" %>
+            <%= link_to "Register", register_path, class: "button" %>
+            <!--If the user is not on the homepage, the link will be Home-->
+          <!-- <%= link_to (current_page?(root_path) ? "Sign in" : "Home"), current_page?(root_path) ? signin_path : root_path %>  -->
+        <% end %> 
       </nav>
     </header>
 
@@ -40,7 +53,7 @@
     <footer>
        &copy; <%= Time.current.year %>
       <span class="logo">
-        <span class="first_color">Paw</span><span class="second_color">tastic</span><span class="third_color">!</span>
+        <span class="first-color">Paw</span><span class="second-color">tastic</span><span class="third-color">!</span>
       </span>
       All rights reserved
     </footer>
