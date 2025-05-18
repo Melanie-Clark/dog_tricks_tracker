@@ -14,4 +14,9 @@ class SessionsController < ApplicationController
       puts "User not registered or incorrect password"
     end
   end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to "/"
+  end
 end
