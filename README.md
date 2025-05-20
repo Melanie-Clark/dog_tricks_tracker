@@ -3,13 +3,11 @@
   <img src="public/favicon_paw.png" alt="Home page image" height=25/>
 </h1> 
 
-Pawtastic is a Ruby on Rails web application designed to help dog owners keep track of their dogs tricks performance and find new tricks. 
+Pawtastic is a Ruby on Rails web application designed to help dog owners keep track of their dogs tricks progress. 
 
-_Please note: This project is in it's infancy and still in development stages_
+_Please note: This project is in it's infancy and in development_
 
-<img src="app/assets/images/readme_images/home_page.png" alt="Home page image"/>
-
-This guide will help you set up the project, run the server, and deploy your application.
+<img src="app/assets/images/readme_images/home_page.png" alt="Home page image" style="border: 2px"/>
 
 ## Requirements
 
@@ -19,23 +17,23 @@ Before getting started, please make sure you have the following installed:
 - **Rails** (version 8.0.2)
 - **PostgreSQL** (or SQLite3 for local development)
 
-To check if you already have the dependencies i.e. ruby 3.4.3:
+To check existing dependencies i.e. ruby 3.4.3:
 
-`ruby -v`
-
-`rails -v`
-
-`psql --version`
+```
+ruby -v
+rails -v
+psql --version
+```
 
 
 ## Setup
 
-
 ###Clone the repository:
 
-`git clone https://github.com/Melanie-Clark/pawtastic.git`
-
-`cd pawtastic`
+```
+git clone https://github.com/Melanie-Clark/pawtastic.git
+cd pawtastic
+```
 
 ### Install the required dependencies:
 `bundle install`
