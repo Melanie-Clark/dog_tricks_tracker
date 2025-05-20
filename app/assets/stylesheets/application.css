@@ -139,7 +139,7 @@ p {
   border: none;
   text-transform: uppercase;
   padding: 1rem 1rem;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 .small-btn {
@@ -181,6 +181,10 @@ input[type=password] {
   margin: 2rem auto;
 }
 
+.flash-alert {
+  margin: 0.5rem;
+  color: var(--second-color);
+}
 /* DASHBOARD */
 
 table {
