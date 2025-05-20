@@ -9,8 +9,17 @@
       <%= f.text_field :last_name, :placeholder => "Surname" %>
       <%= f.email_field :email, :placeholder => "E-mail" %>
       <%= f.password_field :password, :placeholder => "Password" %>
+
+      <!-- alert for failed registration -->
+      <% if flash[:alert] %>
+        <div class="flash-alert">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+
       <%= f.submit "Create an Account", class: "form-btn" %>
     <% end %>
+
     <div class="small-txt">
       Already registered?&nbsp;
       <%= link_to "Sign in", signin_path %>
