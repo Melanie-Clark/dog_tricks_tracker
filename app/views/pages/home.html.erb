@@ -17,7 +17,9 @@
   </div>
 
   <nav>
-    <%= link_to "sign in", signin_path, class: "button small-btn" %>
+    <% if !current_user %>
+      <%= link_to "sign in", signin_path, class: "button small-btn" %>
+    <% end %>
   </nav>
   
 </div>
