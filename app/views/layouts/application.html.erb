@@ -31,9 +31,9 @@
       </h1>
       <nav>
         <% if current_user %>
-          <div class="user-nav">
+          <div class="user-nav" style="font-weight: bold;">
             <%= "Hi #{current_user.first_name}!" %>
-            <%= button_to "Log out", logout_path, method: "delete", class: "button form-nav-btn" %>
+            <%= button_to "Sign out", logout_path, method: "delete", class: "button form-nav-btn" %>
           </div>
         <% elsif current_page?(register_path) || current_page?(signin_path)%>  
             <%= link_to "Home", root_path, class: "button" %>
