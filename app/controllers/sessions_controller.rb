@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
-      redirect_to "/", allow_other_host: true
+      redirect_to dashboard_path, allow_other_host: true
       puts "Success - User already registered"
     else
       redirect_to "/signin", allow_other_host: true

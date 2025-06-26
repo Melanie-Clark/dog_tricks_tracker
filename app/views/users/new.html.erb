@@ -1,16 +1,27 @@
-<div class="register_form">
+<div class="registration_form">
   
   <h2 class="first-color">Register</h2>
 
   <div class="form">
   <!-- @user is User.new (as per contoller). As it's a new instance, Rails auto routes the POST request to users#create in UsersController -->
     <%= form_for(@user) do |f| %> 
-      <%= f.text_field :first_name, :placeholder => "First Name" %>
-      <%= f.text_field :last_name, :placeholder => "Surname" %>
-      <%= f.email_field :email, :placeholder => "E-mail" %>
-      <%= f.password_field :password, :placeholder => "Password" %>
+      <!-- required - client side validation -->
+      <%= f.text_field :first_name, :placeholder => "First Name", required: true %>
+      <%= f.text_field :last_name, :placeholder => "Surname", required: true %>
+      <%= f.email_field :email, :placeholder => "E-mail", required: true %>
+      <%= f.password_field :password, :placeholder => "Password", required: true %>
+      <%= f.password_field :password_confirmation, placeholder: "Confirm Password", required: true %>
+
+      <!-- alert for failed registration -->
+      <% if flash[:alert] %>
+        <div class="flash-alert">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+
       <%= f.submit "Create an Account", class: "form-btn" %>
     <% end %>
+
     <div class="small-txt">
       Already registered?&nbsp;
       <%= link_to "Sign in", signin_path %>

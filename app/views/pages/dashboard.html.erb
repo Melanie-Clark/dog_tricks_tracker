@@ -1,38 +1,41 @@
-<h2>
-  <span class="second_color">My Dashboard</span>
-</h2>
+<div class="dashboard">
+  <div class="container">
 
-<p>Here is a list of all the tricks completed or ready to do and have fun with your dog!</p>
+    <h1>
+      <span class="first-color">My Dashboard</span>
+    </h1>
 
-<h2> 
-  <span class="first_color">Paw</span><span class="second_color">tastic</span>
-  <span class="black">Tricks!</span>
-</h2>
+    <p>Here is a list of all the tricks completed or ready to do and have fun with your dog!</p>
 
-<table>
-  <thead>
-    <tr>
-      <th class="first_column">Trick</th>
-      <th>1m</th>
-      <th>Outdoors</th>
-      <th>Distance</th>
-      <th>Notes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @tricks.each do |trick| %>
-      <tr>
-        <td class="first_column">
-          <%= trick.name %>
-        </td>
-        <% 3.times do %>
-          <td class="completed">
+    <h3> 
+      <span class="first-color">Paw</span><span class="second-color">tastic</span>
+      <span class="third-color">Tricks!</span>
+    </h3>
 
+  <%= form_with url: save_tricks_path, method: :post do %>
+    <table>
+      <thead>
+        <tr>
+          <th class="first_column">Trick</th>
+          <th>Complete</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @tricks.each do |trick| %>
+          <tr>
+            <td class="first_column">
+              <%= trick.name %>
+            </td>
+            <td>           
+              <%= check_box_tag "tricks[#{trick.id}][complete]", "1", trick.complete %> <!-- i.e. tricks[3][one_minute]-->
           </td>
+          </tr>
         <% end %>
-        <!-- Notes column -->
-        <td></td> 
-      </tr>
+      </tbody>
+    </table>
+
+    <%= submit_tag "Save Progress", class: "form-btn" %>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>

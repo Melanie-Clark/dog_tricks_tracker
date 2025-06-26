@@ -90,9 +90,15 @@ h3 {
   margin: 0;
 }
 
-p {
+h4 {
   margin: 0.5rem;
   font-size: 1.5rem;
+  font-weight: normal;
+}
+
+p {
+  margin: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .small-txt {
@@ -139,7 +145,7 @@ p {
   border: none;
   text-transform: uppercase;
   padding: 1rem 1rem;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 .small-btn {
@@ -181,11 +187,17 @@ input[type=password] {
   margin: 2rem auto;
 }
 
+.flash-alert {
+  margin: 0.5rem;
+  color: var(--second-color);
+}
 /* DASHBOARD */
 
 table {
-  width: 100%;
+  width: 50%;
   border-collapse: collapse; 
+  margin: 0 auto;
+  margin-top: 20pt;
 }
 
 table, th, td {

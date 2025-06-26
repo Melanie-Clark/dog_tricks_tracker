@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   post "signin", to: "sessions#create"
 
   delete "logout", to: "sessions#destroy"
+
+  post "save_tricks", to: "pages#save_tricks", as: :save_tricks
 end
