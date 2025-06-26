@@ -90,9 +90,15 @@ h3 {
   margin: 0;
 }
 
-p {
+h4 {
   margin: 0.5rem;
   font-size: 1.5rem;
+  font-weight: normal;
+}
+
+p {
+  margin: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .small-txt {
@@ -188,8 +194,10 @@ input[type=password] {
 /* DASHBOARD */
 
 table {
-  width: 100%;
+  width: 50%;
   border-collapse: collapse; 
+  margin: 0 auto;
+  margin-top: 20pt;
 }
 
 table, th, td {
