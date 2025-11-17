@@ -13,28 +13,29 @@
       <span class="third-color">Tricks!</span>
     </h3>
 
-  <%= form_with url: save_tricks_path, method: :post do %>
-    <table>
-      <thead>
-        <tr>
-          <th class="first_column">Trick</th>
-          <th>Complete</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @tricks.each do |trick| %>
+    <%= form_with url: save_tricks_path, method: :post do %>
+      <table>
+        <thead>
           <tr>
-            <td class="first_column">
-              <%= trick.name %>
-            </td>
-            <td>           
-              <%= check_box_tag "tricks[#{trick.id}][complete]", "1", trick.complete %> <!-- i.e. tricks[3][one_minute]-->
-          </td>
+            <th class="first_column">Trick</th>
+            <th>Complete</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+          <% @tricks.each do |trick| %>
+            <tr>
+              <td class="first_column">
+                <%= trick.name %>
+              </td>
+              <td>           
+                <%= hidden_field_tag "tricks[#{trick.id}][complete]", "0" %>
+                <%= check_box_tag "tricks[#{trick.id}][complete]", "1", trick.complete %>
+            </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
     <%= submit_tag "Save Progress", class: "form-btn" %>
     <% end %>
