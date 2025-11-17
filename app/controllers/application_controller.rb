@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   # Only allow modern browsers supporting webp images, web push, badges, import maps, CSS nesting, and CSS :has.
   allow_browser versions: :modern
 
-  # males current_user method available in views (By default, all methods defined in Application Controller are already available in the controllers)
+  # makes current_user method available in views (By default, all methods defined in Application Controller are already available in the controllers)
   helper_method :current_user
 
   # Checks if user is logged in or not. Whichever it is @current_user is assigned ||=
