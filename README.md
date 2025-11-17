@@ -3,11 +3,10 @@
   <img src="public/favicon_paw.png" alt="Home page image" height=25/>
 </h1> 
 
-Pawtastic is a Ruby on Rails web application designed to help dog owners keep track of their dogs tricks progress. 
-
-_Please note: This project is in it's infancy and in development_
+Pawtastic is a basic Ruby on Rails web application designed to help dog owners keep track of their dogs tricks progress. 
 
 <img src="app/assets/images/readme_images/home_page.png" alt="Home page image" style="border: 2px"/>
+<img src="app/assets/images/readme_images/dashboard.png" alt="Dashboard image" style="border: 2px"/>
 
 ## Requirements
 

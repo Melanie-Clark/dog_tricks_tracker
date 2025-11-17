@@ -194,7 +194,7 @@ input[type=password] {
 /* DASHBOARD */
 
 table {
-  width: 50%;
+  width: 40%;
   border-collapse: collapse; 
   margin: 0 auto;
   margin-top: 20pt;
@@ -206,4 +206,6 @@ table, th, td {
 
 .first_column {
   padding-left: 1rem;
+  text-align: left;
+  margin: 0.5rem;
 }

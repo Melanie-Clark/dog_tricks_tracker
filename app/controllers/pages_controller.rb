@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @tricks = Trick.all
+    @tricks = Trick.order(complete: :asc, name: :asc)
   end
 
   def save_tricks
